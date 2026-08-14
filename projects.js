@@ -48,95 +48,41 @@
 
 const PROJECTS = [
   {
-    id: "midnight-runners",            // unique, used in the URL — no spaces
-    title: "Midnight Runners",
-    category: "editing",               // "editing" or "videography"
+    id: "len-popup",            // unique, used in the URL — no spaces
+    title: "Len Popup",
+    category: "videography",               // "editing" or "videography"
     year: 2026,
     thumb: "g-e1",
     videoUrl: "",
-    description: "A short-film edit built around pacing, sound design, and a warm film-grade look."
+    description: "Shoot of Len's Golden Boy Popup."
   },
   {
-    id: "solstice-campaign",
-    title: "Solstice — Brand Campaign",
+    id: "mr-goodman-munni",
+    title: "Mr Goodman Munni",
     category: "editing",
-    year: 2025,
+    year: 2026,
     thumb: "g-e2",
     videoUrl: "",
-    description: "A 60-second brand campaign cut, edited for a fast social-first pace."
+    description: "Edit incorporating the use of blender 3d as well as 3d layers in After effects."
   },
   {
-    id: "afterglow-edit",
-    title: "Afterglow — Music Video Edit",
+    id: "geo-visuals",
+    title: "Visuals (for Geo)",
     category: "editing",
-    year: 2025,
+    year: 2026,
     thumb: "g-e3",
     videoUrl: "",
-    description: "Performance and narrative footage cut together for an independent artist's single."
+    description: "Visuals commission for rapper @geobskts."
   },
   {
-    id: "skyline-reel",
-    title: "Skyline — Corporate Reel",
+    id: "imjussayin",
+    title: "Im jus sayin",
     category: "editing",
-    year: 2024,
+    year: 2026,
     thumb: "g-e4",
     videoUrl: "",
-    description: "A company highlight reel edited from a year of internal event footage."
+    description: "Edit with 3d layers and mograph elements."
   },
-  {
-    id: "echo-short",
-    title: "Echo — Narrative Short",
-    category: "editing",
-    year: 2023,
-    thumb: "g-e5",
-    videoUrl: "",
-    description: "An 11-minute narrative short, edited for a festival submission cut."
-  },
-  {
-    id: "highland-wedding",
-    title: "Highland Wedding — Full Coverage",
-    category: "videography",
-    year: 2026,
-    thumb: "g-v1",
-    videoUrl: "",
-    description: "Full-day wedding coverage shot on location, from ceremony through reception."
-  },
-  {
-    id: "vantage-coffee",
-    title: "Vantage Coffee — On Location",
-    category: "videography",
-    year: 2025,
-    thumb: "g-v2",
-    videoUrl: "",
-    description: "On-location product and lifestyle footage shot for a coffee brand's spring launch."
-  },
-  {
-    id: "coastal-run",
-    title: "Coastal Run — Sports Doc",
-    category: "videography",
-    year: 2024,
-    thumb: "g-v3",
-    videoUrl: "",
-    description: "Documentary-style coverage of a coastal endurance race, shot across two days."
-  },
-  {
-    id: "foundry-brand-film",
-    title: "Foundry Co. — Brand Film",
-    category: "videography",
-    year: 2025,
-    thumb: "g-v4",
-    videoUrl: "",
-    description: "A short brand film shot on location at a working foundry."
-  },
-  {
-    id: "aperture-talks",
-    title: "Aperture Talks — Interview Series",
-    category: "videography",
-    year: 2023,
-    thumb: "g-v5",
-    videoUrl: "",
-    description: "Multi-camera interview coverage for an ongoing creative-industry talk series."
-  }
 ];
 
 /* ------------------------------------------------------------
