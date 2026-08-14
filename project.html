@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Rivera — Project</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav-left">
+    <a href="index.html">Work</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="detail" id="detail">
+  <!-- filled in by JS -->
+</main>
+
+<script src="projects.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const project = PROJECTS.find(p => p.id === id);
+  const detail = document.getElementById('detail');
+
+  if(!project){
+    detail.innerHTML = `<div class="not-found">
+      <p>Couldn't find that project.</p>
+      <p style="margin-top:14px;"><a class="back-link" href="index.html" style="padding:0;">← Back to work</a></p>
+    </div>`;
+  } else {
+    // pick 2 recommendations: prefer same category, exclude current project
+    const sameCategory = PROJECTS.filter(p => p.id !== project.id && p.category === project.category);
+    const otherCategory = PROJECTS.filter(p => p.id !== project.id && p.category !== project.category);
+    const recommendations = [...sameCategory, ...otherCategory].slice(0, 2);
+
+    detail.innerHTML = `
+      <a class="back-link" href="index.html">← Back to work</a>
+      <div class="detail-head">
+        <h1 class="detail-title">${project.title}</h1>
+        <div class="detail-meta mono">
+          <span class="cat">${categoryLabel(project.category)}</span>
+          <span>${project.year}</span>
+        </div>
+      </div>
+
+      <div class="video-wrapper">
+        ${renderPlayerMarkup(project)}
+      </div>
+
+      <p class="detail-desc">${project.description}</p>
+
+      <div class="more-work">
+        <h3>More Work</h3>
+        <div class="rec-grid">
+          ${recommendations.map(r => `
+            <a class="rec-card" href="project.html?id=${encodeURIComponent(r.id)}">
+              <div class="rec-thumb ${r.thumb}"></div>
+              <div class="rec-info">
+                <h4>${r.title}</h4>
+                <span class="mono">${categoryLabel(r.category)} · ${r.year}</span>
+              </div>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+</script>
+
+</body>
+</html>

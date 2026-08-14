@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Rivera — Video Editor &amp; Videographer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav-left">
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="filters" id="work">
+  <button class="active" data-filter="all">All</button>
+  <button data-filter="editing">Video Editing</button>
+  <button data-filter="videography">Videography</button>
+</section>
+
+<section class="work">
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="about">
+  <div class="about-grid">
+    <div>
+      <h2>About</h2>
+      <p>I'm a video editor and videographer working across narrative, brand, and music. On set, I shoot with an eye for what the edit will need. In the timeline, I build pace and story out of the footage, whether that's mine or someone else's.</p>
+      <p>Based in [Your City] — available for projects worldwide, remote or on-location.</p>
+      <div class="chips">
+        <span class="chip">Premiere Pro</span>
+        <span class="chip">DaVinci Resolve</span>
+        <span class="chip">After Effects</span>
+        <span class="chip">Color Grading</span>
+        <span class="chip">Sony FX3</span>
+        <span class="chip">DJI RS3</span>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact"><span>Years Active</span><span class="mono">2019 — 2026</span></div>
+      <div class="fact"><span>Projects Delivered</span><span class="mono">120+</span></div>
+      <div class="fact"><span>Turnaround</span><span class="mono">48–72 HRS</span></div>
+      <div class="fact"><span>Availability</span><span class="mono">OPEN</span></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="contact-row">
+    <h2>Let's cut<br>something together.</h2>
+    <div class="contact-links">
+      <a href="mailto:hello@alexrivera.work">hello@alexrivera.work</a>
+      <a href="#">Instagram</a>
+      <a href="#">Vimeo</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 ALEX RIVERA</span>
+    <span class="mono">EDITED IN CARDIFF, RENDERED EVERYWHERE</span>
+  </div>
+</footer>
+
+<script src="projects.js"></script>
+<script>
+  const grid = document.getElementById('grid');
+
+  function buildGrid(){
+    grid.innerHTML = PROJECTS.map(p => `
+      <a class="tile" href="project.html?id=${encodeURIComponent(p.id)}" data-cat="${p.category}">
+        <div class="still ${p.thumb}">
+          <div class="tile-overlay">
+            <span class="tile-cat">${categoryLabel(p.category)} <i class="ring"></i></span>
+            <span class="tile-year mono">${p.year}</span>
+          </div>
+        </div>
+      </a>
+    `).join('');
+  }
+  buildGrid();
+
+  const buttons = document.querySelectorAll('.filters button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.tile').forEach(t => {
+        t.classList.toggle('hidden', f !== 'all' && t.dataset.cat !== f);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
