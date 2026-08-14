@@ -48,7 +48,9 @@ header{
 .work{padding:0 clamp(20px,5vw,56px) 90px;}
 .grid{
   display:grid;grid-template-columns:repeat(2,1fr);
-  gap:3px;
+  gap:28px;
+  max-width:800px;
+  margin:0 auto;
 }
 .tile{position:relative;overflow:hidden;display:block;}
 .tile.hidden{display:none;}
