@@ -1,56 +1,10 @@
-/* ============================================================
-   PROJECTS DATA
-   ------------------------------------------------------------
-   This is the only file you need to touch to add, remove, or
-   edit videos on the site. Both index.html (the grid) and
-   project.html (the video detail page) read from this list.
 
-   HOW TO ADD A VIDEO
-   -------------------
-   Copy one of the objects below, paste it into the array, and
-   change the values. Every field is explained inline.
-
-   HOW TO REMOVE A VIDEO
-   ----------------------
-   Delete its whole { ... } block from the array (including the
-   comma after it).
-
-   HOW TO ASSIGN A VIDEO TO A SECTION
-   ------------------------------------
-   Set "category" to exactly "editing" (for the Video Editing
-   section) or "videography" (for the Videography section).
-   That's the ONLY thing that controls which filter tab / section
-   a video shows up under.
-
-   ADDING YOUR OWN THUMBNAIL COLOR
-   ---------------------------------
-   "thumb" refers to a CSS class in style.css. There are 5 warm
-   ones for editing (g-e1 – g-e5) and 5 cool ones for videography
-   (g-v1 – g-v5) already defined. You can reuse them across
-   multiple projects, or add new ones in style.css and reference
-   them here. Later, swap these for real thumbnails by editing
-   the .still classes in style.css to use background-image
-   instead of a gradient.
-
-   ADDING YOUR ACTUAL VIDEO
-   ---------------------------
-   Paste a link into "videoUrl":
-     - YouTube: use the EMBED link, e.g.
-       "https://www.youtube.com/embed/VIDEO_ID"
-       (from the Share > Embed button on YouTube, just take the
-       src="..." URL out of the embed code)
-     - Vimeo: use the player embed link, e.g.
-       "https://player.vimeo.com/video/VIDEO_ID"
-     - A direct video file: any URL ending in .mp4 or .webm
-   Leave "videoUrl": "" (empty) and the detail page will show a
-   placeholder reminding you to add it later.
-   ============================================================ */
 
 const PROJECTS = [
   {
-    id: "len-popup",            // unique, used in the URL — no spaces
+    id: "len-popup",
     title: "Len Popup",
-    category: "videography",               // "editing" or "videography"
+    category: "videography",
     year: 2026,
     thumb: "g-e1",
     videoUrl: "",
@@ -62,7 +16,7 @@ const PROJECTS = [
     category: "editing",
     year: 2026,
     thumb: "g-e2",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/v_PiOAmljSM?si=RQD8beNtYqlTDzfE",
     description: "Edit incorporating the use of blender 3d as well as 3d layers in After effects."
   },
   {
@@ -71,7 +25,7 @@ const PROJECTS = [
     category: "editing",
     year: 2026,
     thumb: "g-e3",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/gmExif1V8Uw?si=XTc-azeD8HcoT6--",
     description: "Visuals commission for rapper @geobskts."
   },
   {
@@ -80,15 +34,14 @@ const PROJECTS = [
     category: "editing",
     year: 2026,
     thumb: "g-e4",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/U54d_TRY9nI?si=0I0yMeGfJHYnaQZc",
     description: "Edit with 3d layers and mograph elements."
   },
 ];
 
 /* ------------------------------------------------------------
-   Helper: turns a videoUrl into the right player markup.
-   You shouldn't need to edit this.
-   ------------------------------------------------------------ */
+dont edit
+------------------------------------------------------------ */
 function renderPlayerMarkup(project){
   const url = project.videoUrl && project.videoUrl.trim();
   if(!url){
