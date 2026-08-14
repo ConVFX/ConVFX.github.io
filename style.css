@@ -47,13 +47,13 @@ header{
 /* ---------- grid ---------- */
 .work{padding:0 clamp(20px,5vw,56px) 90px;}
 .grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  display:grid;grid-template-columns:repeat(2,1fr);
   gap:3px;
 }
 .tile{position:relative;overflow:hidden;display:block;}
 .tile.hidden{display:none;}
 .still{width:100%;aspect-ratio:4/3;position:relative;transition:transform .5s ease;}
-.still::after{
+.still::after{F
   content:'';position:absolute;inset:0;background-image:var(--noise);
   opacity:.10;mix-blend-mode:overlay;
 }
