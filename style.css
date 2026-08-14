@@ -81,9 +81,9 @@ header{
 
 /* still gradient variants — editing = warm grade, videography = natural/cool grade */
 .g-e1{background:linear-gradient(135deg,#3a1f1a,#7a3b25 45%,#c9752f 100%);}
-.g-e2{background:linear-gradient(150deg,#1f1a12,#5a4420 55%,#b98a2e 100%);}
-.g-e3{background:linear-gradient(130deg,#221417,#652b2b 50%,#c15b2c 100%);}
-.g-e4{background:linear-gradient(160deg,#1e1a10,#4f4118 55%,#9c7a2a 100%);}
+.g-e2{background-image:url('thumbnails/mrgoodman');background-size:cover;background-position:center;}
+.g-e3{background-image:url('thumbnails/visualsgeo');background-size:cover;background-position:center;}
+.g-e4{background-image:url('thumbnails/imjussayin');background-size:cover;background-position:center;}
 .g-e5{background:linear-gradient(140deg,#241a2a,#5c2f4e 55%,#b0533a 100%);}
 .g-v1{background:linear-gradient(135deg,#0f1c1c,#1f3d3d 50%,#3f7a72 100%);}
 .g-v2{background:linear-gradient(150deg,#0e1620,#1c3350 55%,#3a6a8a 100%);}
