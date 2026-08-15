@@ -7,7 +7,7 @@ const PROJECTS = [
     category: "videography",
     year: 2026,
     thumb: "g-e1",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/8vlNELU79sk?si=bi74luyBzQsuwCWR",
     description: "Shoot of Len's Golden Boy Popup."
   },
   {
