@@ -83,7 +83,7 @@ header{
 .tile-year{font-size:11.5px;color:var(--muted);letter-spacing:.06em;}
 
 /* still gradient variants — editing = warm grade, videography = natural/cool grade */
-.g-e1{background:linear-gradient(135deg,#3a1f1a,#7a3b25 45%,#c9752f 100%);}
+.g-e1{background-image:url('thumbnails/goldenboy.png');background-size:cover;background-position:center;}
 .g-e2{background-image:url('thumbnails/mrgoodman.png');background-size:cover;background-position:center;}
 .g-e3{background-image:url('thumbnails/visualsgeo.png');background-size:cover;background-position:center;}
 .g-e4{background-image:url('thumbnails/imjussayin.png');background-size:cover;background-position:center;}
